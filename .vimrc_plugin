@@ -58,8 +58,8 @@ set number
 set showmatch
 
 " " key maps
-c>
-c>
+inoremap jk <Esc>
+inoremap JK <Esc>
 "inoremap ( ()<Esc>i
 "inoremap [ []<Esc>i
 inoremap { {<CR>}<Esc>O
@@ -84,4 +84,4 @@ hi MatchParen cterm=none ctermbg=green ctermfg=blue
 set t_Co=256;
 colorscheme molokai
 
-noremap noremap 
+
