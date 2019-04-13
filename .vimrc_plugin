@@ -60,15 +60,16 @@ set showmatch
 " " key maps
 inoremap jk <Esc>
 inoremap JK <Esc>
-"inoremap ( ()<Esc>i
-"inoremap [ []<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
 inoremap { {<CR>}<Esc>O
 
 "for mucomplete
 set completeopt+=menuone
-inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
-inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
-inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
+set completeopt-=preview
+"inoremap <expr> <c-e> mucomplete#popup_exit("\<c-e>")
+"inoremap <expr> <c-y> mucomplete#popup_exit("\<c-y>")
+"inoremap <expr>  <cr> mucomplete#popup_exit("\<cr>")
 set completeopt+=noinsert
 set shortmess+=c
 set belloff+=ctrlg
@@ -80,8 +81,8 @@ highlight Comment cterm=bold
 au FileType * set fo-=c fo-=r fo-=o
 
 "make molokai color scheme look better
+colorscheme molokai
 hi MatchParen cterm=none ctermbg=green ctermfg=blue
 set t_Co=256;
-colorscheme molokai
 
 
